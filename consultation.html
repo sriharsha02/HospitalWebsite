@@ -20,13 +20,28 @@
           <h1>Please fill the patient detais as below</h1>
           <div class="maindivconsultation">
             <form class="maindivconsultation" action="mailto:asleshbabu@gmail.com">
-                <label for="name" id="namelabel">Name: </label>
-                <input type="text">
-                <label for="name" id="emaillabel">Email Id: </label>
-                <input type="email">
-                <label for="number" id="numberlabel">Mobile Number:</label>
-                <input type="tel">
-                <button type="submit">Submit</button>
+                <div class="consultformdiv">
+                    <label for="name" id="namelabel">Name: </label>
+                    <input type="text">
+                </div>
+                <div class="consultformdiv">
+                    <label for="name" id="emaillabel">Email Id: </label>
+                    <input type="email">
+                </div>
+                <div class="consultformdiv">
+                    <label for="number" id="numberlabel">Mobile Number:</label>
+                    <input type="tel">
+                </div class="consultformdiv">
+                <div>
+                    <label for="mode">Mode Of Appointment:</label>
+                    <input type="radio" name="online" id="online"><label for="">Online </label> 
+                    <input type="radio" name="online" id="offline"><label for="">Offline </label> 
+                </div>
+               
+                <div class="consultformdiv">
+                    <button type="submit">Submit</button>
+                </div>
+                
             </form>
           </div>
         </section>
