@@ -3,6 +3,14 @@
         <title> S A S Hospitals </title>
         <link rel="stylesheet" href="styles.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+            (function(){
+                emailjs.init("7sSuzThOvfEidbrRl");
+            })();
+        </script>
     </head>
     
     <body>
@@ -17,35 +25,22 @@
         </header>
         <section class="consultation">
             
-          <h1>Please fill the patient detais as below</h1>
+          
           <div class="maindivconsultation">
-            <form class="maindivconsultation" action="mailto:asleshbabu@gmail.com">
-                <div class="consultformdiv">
-                    <label for="name" id="namelabel">Name: </label>
-                    <input type="text">
-                </div>
-                <div class="consultformdiv">
-                    <label for="name" id="emaillabel">Email Id: </label>
-                    <input type="email">
-                </div>
-                <div class="consultformdiv">
-                    <label for="number" id="numberlabel">Mobile Number:</label>
-                    <input type="tel">
-                </div class="consultformdiv">
-                <div>
-                    <label for="mode">Mode Of Appointment:</label>
-                    <input type="radio" name="online" id="online"><label for="">Online </label> 
-                    <input type="radio" name="online" id="offline"><label for="">Offline </label> 
-                </div>
-               
-                <div class="consultformdiv">
-                    <button type="submit">Submit</button>
-                </div>
-                
+            <form onsubmit="sendEmail(); reset(); return false;">
+                <h1>Fill the patient detais for consultation</h1>
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="text" id="phone" placeholder="Phone Number" required>
+                <input type="email" id="email" placeholder="Email Id" required>
+                <input type="text" id="appoinmentmode" placeholder="Appointment Mode: Online/Offline">
+                <textarea id="symptoms" rows="6" placeholder="Specify the Symptoms you noticed"></textarea>
+                <button type="submit">Submit</button>
             </form>
+           
           </div>
         </section>
        
-        
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script src="index.js"></script>
     </body>
 </html>
