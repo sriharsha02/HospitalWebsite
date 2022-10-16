@@ -9,7 +9,7 @@ function sendEmail(){
 
   }
   emailjs.send("service_qo57wmk", "template_c5l0ldl", details).then( function (res){
-    alert("You Data has been sent to the concerned Doctor" + res.status)
+    alert("Your request has been sent to the concerned Doctor")
   })
  
 } 
